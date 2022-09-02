@@ -16,6 +16,11 @@
 		03AFD73328AF84DE00D032E4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AFD73128AF84DE00D032E4 /* RootView.swift */; };
 		03AFD73428AF84DE00D032E4 /* RootFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AFD73228AF84DE00D032E4 /* RootFeature.swift */; };
 		03AFD73828AF854800D032E4 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 03AFD73728AF854800D032E4 /* ComposableArchitecture */; };
+		4068E55028BA36D5001DC10A /* FactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4068E54F28BA36D5001DC10A /* FactClient.swift */; };
+		409DC7CD28B0944700E0A5A5 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DC7CB28B0944700E0A5A5 /* CounterView.swift */; };
+		409DC7CE28B0944700E0A5A5 /* CounterCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DC7CC28B0944700E0A5A5 /* CounterCore.swift */; };
+		409DC7D128B0945000E0A5A5 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DC7CF28B0945000E0A5A5 /* FavoriteView.swift */; };
+		409DC7D228B0945000E0A5A5 /* FavoriteCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DC7D028B0945000E0A5A5 /* FavoriteCore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,12 @@
 		03AFD72428AF83F100D032E4 /* CounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		03AFD73128AF84DE00D032E4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		03AFD73228AF84DE00D032E4 /* RootFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeature.swift; sourceTree = "<group>"; };
+		4068E54F28BA36D5001DC10A /* FactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactClient.swift; sourceTree = "<group>"; };
+		407321B828BBC4D100DED879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		409DC7CB28B0944700E0A5A5 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		409DC7CC28B0944700E0A5A5 /* CounterCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterCore.swift; sourceTree = "<group>"; };
+		409DC7CF28B0945000E0A5A5 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		409DC7D028B0945000E0A5A5 /* FavoriteCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +109,7 @@
 		03AFD70628AF83F000D032E4 /* Counter */ = {
 			isa = PBXGroup;
 			children = (
+				407321B828BBC4D100DED879 /* Info.plist */,
 				03AFD73528AF84E200D032E4 /* App */,
 				03AFD70B28AF83F100D032E4 /* Assets.xcassets */,
 				03AFD70D28AF83F100D032E4 /* Preview Content */,
@@ -136,8 +148,37 @@
 				03AFD70728AF83F000D032E4 /* CounterApp.swift */,
 				03AFD73128AF84DE00D032E4 /* RootView.swift */,
 				03AFD73228AF84DE00D032E4 /* RootFeature.swift */,
+				409DC7C928B0942A00E0A5A5 /* Counter */,
+				409DC7CA28B0943600E0A5A5 /* Favorite */,
+				4068E54E28BA36C1001DC10A /* Client */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		4068E54E28BA36C1001DC10A /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				4068E54F28BA36D5001DC10A /* FactClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		409DC7C928B0942A00E0A5A5 /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				409DC7CB28B0944700E0A5A5 /* CounterView.swift */,
+				409DC7CC28B0944700E0A5A5 /* CounterCore.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		409DC7CA28B0943600E0A5A5 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				409DC7CF28B0945000E0A5A5 /* FavoriteView.swift */,
+				409DC7D028B0945000E0A5A5 /* FavoriteCore.swift */,
+			);
+			path = Favorite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4068E55028BA36D5001DC10A /* FactClient.swift in Sources */,
 				03AFD73428AF84DE00D032E4 /* RootFeature.swift in Sources */,
 				03AFD70828AF83F000D032E4 /* CounterApp.swift in Sources */,
 				03AFD73328AF84DE00D032E4 /* RootView.swift in Sources */,
+				409DC7CE28B0944700E0A5A5 /* CounterCore.swift in Sources */,
+				409DC7D228B0945000E0A5A5 /* FavoriteCore.swift in Sources */,
+				409DC7D128B0945000E0A5A5 /* FavoriteView.swift in Sources */,
+				409DC7CD28B0944700E0A5A5 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,9 +483,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Counter/Preview Content\"";
-				DEVELOPMENT_TEAM = 33682G444U;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Counter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -466,9 +513,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Counter/Preview Content\"";
-				DEVELOPMENT_TEAM = 33682G444U;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Counter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -609,7 +657,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
-				branch = main;
+				branch = "protocol-beta";
 				kind = branch;
 			};
 		};

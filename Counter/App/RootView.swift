@@ -15,7 +15,38 @@ struct RootView: View {
     // MARK: Body
     
     var body: some View {
-        Text("Hello, World!")
+        WithViewStore(store) { viewStore in
+            NavigationView {
+                Form {
+                    Section {
+                        NavigationLink(
+                            "Counter Demo",
+                            destination: {
+                                CounterView(
+                                    store: store.scope(
+                                        state: \.counter, 
+                                        action: RootAction.counter
+                                    )
+                                )
+                            }
+                        )
+                        
+                        NavigationLink(
+                            "Favorite Primes",
+                            destination: {
+                                FavoriteView(
+                                    store: store.scope(
+                                        state: \.favorite, 
+                                        action: RootAction.favorite
+                                    )
+                                )
+                            }
+                        )
+                    }
+                }
+                .navigationTitle("Counter App")
+            }
+        }
     }
 } 
 
