@@ -8,13 +8,17 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct CounterView: View {
+public struct CounterView: View {
     
     let store: Store<CounterState, CounterAction>
     
+    public init(store: Store<CounterState, CounterAction>) {
+        self.store = store
+    }
+    
     // MARK: Body
     
-    var body: some View {
+    public var body: some View {
         WithViewStore(store) { viewStore in
             Form {
                 Section {

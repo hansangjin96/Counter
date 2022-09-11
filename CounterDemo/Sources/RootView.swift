@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Counter
+import Favorite
 import ComposableArchitecture
 
 struct RootView: View {

@@ -5,19 +5,15 @@
 //  Created by havi.log on 2022/08/19.
 //
 
+import Counter
+import Favorite
 import ComposableArchitecture
 
 struct RootState: Equatable {
     var counter = CounterState()
     var favorite: FavoriteState {
-        get {
-            FavoriteState(
-                favoriteNumbers: self.counter.favoriteNumbers
-            )
-        }
-        set {
-            self.counter.favoriteNumbers = newValue.favoriteNumbers
-        }
+        get { FavoriteState(favoriteNumbers: counter.favoriteNumbers) }
+        set { counter.favoriteNumbers = newValue.favoriteNumbers }
     }
 }
 

@@ -7,17 +7,31 @@
 
 import ComposableArchitecture
 
-struct CounterState: Equatable {
-    var currentNumber: Int = 0
-    var isNumberFactRequestInFlight: Bool = false
+public struct CounterState: Equatable {
+    var currentNumber: Int
+    var isNumberFactRequestInFlight: Bool
     var numberFact: String?
-    var favoriteNumbers: [Int] = []
+    public var favoriteNumbers: [Int]
     var alert: AlertState<CounterAction>?
     
     var isFavoriteNumber: Bool { return favoriteNumbers.contains(currentNumber) }
+    
+    public init(
+        currentNumber: Int = 0,
+        isNumberFactRequestInFlight: Bool = false,
+        numberFact: String? = nil,
+        favoriteNumbers: [Int] = [], 
+        alert: AlertState<CounterAction>? = nil
+    ) {
+        self.currentNumber = currentNumber
+        self.isNumberFactRequestInFlight = isNumberFactRequestInFlight
+        self.numberFact = numberFact
+        self.favoriteNumbers = favoriteNumbers
+        self.alert = alert
+    }
 }
 
-enum CounterAction: Equatable {
+public enum CounterAction: Equatable {
     case incrementButtonTapped
     case decrementButtonTapped
     
@@ -31,11 +45,17 @@ enum CounterAction: Equatable {
     case alertDismissed
 }
 
-struct CounterEnvironment {
+public struct CounterEnvironment {
     var factClient: FactClient
+    
+    public init(
+        factClient: FactClient
+    ) {
+        self.factClient = factClient
+    }
 }
 
-let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironment> { state, action, environment in
+public let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironment> { state, action, environment in
     enum NumberFactRequestID { }
     
     switch action {
@@ -97,4 +117,4 @@ let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironment> { 
         state.alert = nil
         return .none
     }
-}
+}.debug()

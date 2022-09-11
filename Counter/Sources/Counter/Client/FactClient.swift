@@ -9,13 +9,13 @@ import Foundation
 import XCTestDynamicOverlay
 import ComposableArchitecture
 
-struct FactClient {
+public struct FactClient {
     var fetch: @Sendable (Int) async throws -> String
 }
 
 extension FactClient {
-    static let live: Self = .init { number in
-        try await Task.sleep(nanoseconds: NSEC_PER_SEC)
+    public static let live: Self = .init { number in
+        try await Task.sleep(nanoseconds: NSEC_PER_SEC / 2)
         let (data, _) = try await URLSession.shared.data(from: URL(string: "http://numbersapi.com/\(number)/trivia")!)
         return String(decoding: data, as: UTF8.self)
     }
@@ -23,6 +23,6 @@ extension FactClient {
 
 #if DEBUG
 extension FactClient {
-    static let unimplemented: Self = .init(fetch: XCTUnimplemented("\(Self.self).fetch"))
+    public static let unimplemented: Self = .init(fetch: XCTUnimplemented("\(Self.self).fetch"))
 }
 #endif

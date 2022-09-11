@@ -8,26 +8,31 @@
 import SwiftUI
 import ComposableArchitecture
 
-struct FavoriteView: View {
+public struct FavoriteView: View {
     
     let store: Store<FavoriteState, FavoriteAction>
     @ObservedObject var viewStore: ViewStore<FavoriteState, FavoriteAction>
     
     // MARK: Body
     
-    init(store: Store<FavoriteState, FavoriteAction>) {
+    public init(store: Store<FavoriteState, FavoriteAction>) {
         self.store = store
         self.viewStore = ViewStore(self.store)
     }
     
-    var body: some View {
-        List {
-            ForEach(viewStore.favoriteNumbers, id: \.self) { number in
-                Text("\(number)")    
+    public var body: some View {
+        if viewStore.favoriteNumbers.isEmpty {
+            Text("아직 추가된 숫자가 없어요!")
+                .navigationTitle("Favorite Number List")
+        } else {
+            List {
+                ForEach(viewStore.favoriteNumbers, id: \.self) { number in
+                    Text("\(number)")    
+                }
+                .onDelete { viewStore.send(.deleteFavoriteNumberTapped($0)) }
             }
-            .onDelete { viewStore.send(.deleteFavoriteNumberTapped($0)) }
+            .navigationTitle("Favorite Number List")    
         }
-        .navigationTitle("Favorite Number List")
     }
 }
 
