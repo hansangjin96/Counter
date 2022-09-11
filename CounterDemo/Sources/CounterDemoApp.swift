@@ -9,13 +9,13 @@ import SwiftUI
 import ComposableArchitecture
 
 @main
-struct CounterApp: App {
+struct CounterDemoApp: App {
     var body: some Scene {
         WindowGroup {
             RootView(
                 store: Store(
                     initialState: RootState(),
-                    reducer: RootReducer,
+                    reducer: rootReducer,
                     environment: .live
                 )
             )

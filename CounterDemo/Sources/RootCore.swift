@@ -30,7 +30,7 @@ struct RootEnvironment: Equatable {
     static let live: Self = .init()
 }
 
-let RootReducer = Reducer<RootState, RootAction, RootEnvironment>.combine(
+let rootReducer = Reducer<RootState, RootAction, RootEnvironment>.combine(
     counterReducer.pullback(
         state: \.counter,
         action: /RootAction.counter,

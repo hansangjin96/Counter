@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03AFD70828AF83F000D032E4 /* CounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AFD70728AF83F000D032E4 /* CounterApp.swift */; };
+		03AFD70828AF83F000D032E4 /* CounterDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AFD70728AF83F000D032E4 /* CounterDemoApp.swift */; };
 		03AFD70C28AF83F100D032E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AFD70B28AF83F100D032E4 /* Assets.xcassets */; };
 		03AFD70F28AF83F100D032E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AFD70E28AF83F100D032E4 /* Preview Assets.xcassets */; };
 		03AFD71928AF83F100D032E4 /* CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AFD71828AF83F100D032E4 /* CounterTests.swift */; };
 		03AFD72328AF83F100D032E4 /* CounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AFD72228AF83F100D032E4 /* CounterUITests.swift */; };
 		03AFD72528AF83F100D032E4 /* CounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AFD72428AF83F100D032E4 /* CounterUITestsLaunchTests.swift */; };
 		03AFD73328AF84DE00D032E4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AFD73128AF84DE00D032E4 /* RootView.swift */; };
-		03AFD73428AF84DE00D032E4 /* RootFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AFD73228AF84DE00D032E4 /* RootFeature.swift */; };
+		03AFD73428AF84DE00D032E4 /* RootCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AFD73228AF84DE00D032E4 /* RootCore.swift */; };
 		03AFD73828AF854800D032E4 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 03AFD73728AF854800D032E4 /* ComposableArchitecture */; };
 		4068E55028BA36D5001DC10A /* FactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4068E54F28BA36D5001DC10A /* FactClient.swift */; };
 		409DC7CD28B0944700E0A5A5 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409DC7CB28B0944700E0A5A5 /* CounterView.swift */; };
@@ -41,19 +41,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03AFD70428AF83F000D032E4 /* Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Counter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		03AFD70728AF83F000D032E4 /* CounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterApp.swift; sourceTree = "<group>"; };
+		03AFD70428AF83F000D032E4 /* CounterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03AFD70728AF83F000D032E4 /* CounterDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterDemoApp.swift; sourceTree = "<group>"; };
 		03AFD70B28AF83F100D032E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03AFD70E28AF83F100D032E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		03AFD71428AF83F100D032E4 /* CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03AFD71428AF83F100D032E4 /* CounterDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AFD71828AF83F100D032E4 /* CounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTests.swift; sourceTree = "<group>"; };
-		03AFD71E28AF83F100D032E4 /* CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03AFD71E28AF83F100D032E4 /* CounterDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AFD72228AF83F100D032E4 /* CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterUITests.swift; sourceTree = "<group>"; };
 		03AFD72428AF83F100D032E4 /* CounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		03AFD73128AF84DE00D032E4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		03AFD73228AF84DE00D032E4 /* RootFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFeature.swift; sourceTree = "<group>"; };
+		03AFD73228AF84DE00D032E4 /* RootCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCore.swift; sourceTree = "<group>"; };
 		4068E54F28BA36D5001DC10A /* FactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactClient.swift; sourceTree = "<group>"; };
-		407321B828BBC4D100DED879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		407321B828BBC4D100DED879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		409DC7CB28B0944700E0A5A5 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		409DC7CC28B0944700E0A5A5 /* CounterCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterCore.swift; sourceTree = "<group>"; };
 		409DC7CF28B0945000E0A5A5 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		03AFD6FB28AF83F000D032E4 = {
 			isa = PBXGroup;
 			children = (
-				03AFD70628AF83F000D032E4 /* Counter */,
+				03AFD70628AF83F000D032E4 /* CounterDemo */,
 				03AFD71728AF83F100D032E4 /* CounterTests */,
 				03AFD72128AF83F100D032E4 /* CounterUITests */,
 				03AFD70528AF83F000D032E4 /* Products */,
@@ -99,22 +99,20 @@
 		03AFD70528AF83F000D032E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				03AFD70428AF83F000D032E4 /* Counter.app */,
-				03AFD71428AF83F100D032E4 /* CounterTests.xctest */,
-				03AFD71E28AF83F100D032E4 /* CounterUITests.xctest */,
+				03AFD70428AF83F000D032E4 /* CounterDemo.app */,
+				03AFD71428AF83F100D032E4 /* CounterDemoTests.xctest */,
+				03AFD71E28AF83F100D032E4 /* CounterDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		03AFD70628AF83F000D032E4 /* Counter */ = {
+		03AFD70628AF83F000D032E4 /* CounterDemo */ = {
 			isa = PBXGroup;
 			children = (
-				407321B828BBC4D100DED879 /* Info.plist */,
-				03AFD73528AF84E200D032E4 /* App */,
-				03AFD70B28AF83F100D032E4 /* Assets.xcassets */,
-				03AFD70D28AF83F100D032E4 /* Preview Content */,
+				03AFD73528AF84E200D032E4 /* Sources */,
+				406DB66028CDBB43007B17A4 /* Resources */,
 			);
-			path = Counter;
+			path = CounterDemo;
 			sourceTree = "<group>";
 		};
 		03AFD70D28AF83F100D032E4 /* Preview Content */ = {
@@ -142,17 +140,17 @@
 			path = CounterUITests;
 			sourceTree = "<group>";
 		};
-		03AFD73528AF84E200D032E4 /* App */ = {
+		03AFD73528AF84E200D032E4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				03AFD70728AF83F000D032E4 /* CounterApp.swift */,
+				03AFD70728AF83F000D032E4 /* CounterDemoApp.swift */,
 				03AFD73128AF84DE00D032E4 /* RootView.swift */,
-				03AFD73228AF84DE00D032E4 /* RootFeature.swift */,
+				03AFD73228AF84DE00D032E4 /* RootCore.swift */,
 				409DC7C928B0942A00E0A5A5 /* Counter */,
 				409DC7CA28B0943600E0A5A5 /* Favorite */,
 				4068E54E28BA36C1001DC10A /* Client */,
 			);
-			path = App;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		4068E54E28BA36C1001DC10A /* Client */ = {
@@ -161,6 +159,16 @@
 				4068E54F28BA36D5001DC10A /* FactClient.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		406DB66028CDBB43007B17A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				407321B828BBC4D100DED879 /* Info.plist */,
+				03AFD70B28AF83F100D032E4 /* Assets.xcassets */,
+				03AFD70D28AF83F100D032E4 /* Preview Content */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		409DC7C928B0942A00E0A5A5 /* Counter */ = {
@@ -184,9 +192,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		03AFD70328AF83F000D032E4 /* Counter */ = {
+		03AFD70328AF83F000D032E4 /* CounterDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03AFD72828AF83F100D032E4 /* Build configuration list for PBXNativeTarget "Counter" */;
+			buildConfigurationList = 03AFD72828AF83F100D032E4 /* Build configuration list for PBXNativeTarget "CounterDemo" */;
 			buildPhases = (
 				03AFD70028AF83F000D032E4 /* Sources */,
 				03AFD70128AF83F000D032E4 /* Frameworks */,
@@ -196,17 +204,17 @@
 			);
 			dependencies = (
 			);
-			name = Counter;
+			name = CounterDemo;
 			packageProductDependencies = (
 				03AFD73728AF854800D032E4 /* ComposableArchitecture */,
 			);
 			productName = Counter;
-			productReference = 03AFD70428AF83F000D032E4 /* Counter.app */;
+			productReference = 03AFD70428AF83F000D032E4 /* CounterDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		03AFD71328AF83F100D032E4 /* CounterTests */ = {
+		03AFD71328AF83F100D032E4 /* CounterDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03AFD72B28AF83F100D032E4 /* Build configuration list for PBXNativeTarget "CounterTests" */;
+			buildConfigurationList = 03AFD72B28AF83F100D032E4 /* Build configuration list for PBXNativeTarget "CounterDemoTests" */;
 			buildPhases = (
 				03AFD71028AF83F100D032E4 /* Sources */,
 				03AFD71128AF83F100D032E4 /* Frameworks */,
@@ -217,14 +225,14 @@
 			dependencies = (
 				03AFD71628AF83F100D032E4 /* PBXTargetDependency */,
 			);
-			name = CounterTests;
+			name = CounterDemoTests;
 			productName = CounterTests;
-			productReference = 03AFD71428AF83F100D032E4 /* CounterTests.xctest */;
+			productReference = 03AFD71428AF83F100D032E4 /* CounterDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		03AFD71D28AF83F100D032E4 /* CounterUITests */ = {
+		03AFD71D28AF83F100D032E4 /* CounterDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03AFD72E28AF83F100D032E4 /* Build configuration list for PBXNativeTarget "CounterUITests" */;
+			buildConfigurationList = 03AFD72E28AF83F100D032E4 /* Build configuration list for PBXNativeTarget "CounterDemoUITests" */;
 			buildPhases = (
 				03AFD71A28AF83F100D032E4 /* Sources */,
 				03AFD71B28AF83F100D032E4 /* Frameworks */,
@@ -235,9 +243,9 @@
 			dependencies = (
 				03AFD72028AF83F100D032E4 /* PBXTargetDependency */,
 			);
-			name = CounterUITests;
+			name = CounterDemoUITests;
 			productName = CounterUITests;
-			productReference = 03AFD71E28AF83F100D032E4 /* CounterUITests.xctest */;
+			productReference = 03AFD71E28AF83F100D032E4 /* CounterDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -263,7 +271,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 03AFD6FF28AF83F000D032E4 /* Build configuration list for PBXProject "Counter" */;
+			buildConfigurationList = 03AFD6FF28AF83F000D032E4 /* Build configuration list for PBXProject "CounterDemo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -279,9 +287,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				03AFD70328AF83F000D032E4 /* Counter */,
-				03AFD71328AF83F100D032E4 /* CounterTests */,
-				03AFD71D28AF83F100D032E4 /* CounterUITests */,
+				03AFD70328AF83F000D032E4 /* CounterDemo */,
+				03AFD71328AF83F100D032E4 /* CounterDemoTests */,
+				03AFD71D28AF83F100D032E4 /* CounterDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -318,8 +326,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4068E55028BA36D5001DC10A /* FactClient.swift in Sources */,
-				03AFD73428AF84DE00D032E4 /* RootFeature.swift in Sources */,
-				03AFD70828AF83F000D032E4 /* CounterApp.swift in Sources */,
+				03AFD73428AF84DE00D032E4 /* RootCore.swift in Sources */,
+				03AFD70828AF83F000D032E4 /* CounterDemoApp.swift in Sources */,
 				03AFD73328AF84DE00D032E4 /* RootView.swift in Sources */,
 				409DC7CE28B0944700E0A5A5 /* CounterCore.swift in Sources */,
 				409DC7D228B0945000E0A5A5 /* FavoriteCore.swift in Sources */,
@@ -350,12 +358,12 @@
 /* Begin PBXTargetDependency section */
 		03AFD71628AF83F100D032E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 03AFD70328AF83F000D032E4 /* Counter */;
+			target = 03AFD70328AF83F000D032E4 /* CounterDemo */;
 			targetProxy = 03AFD71528AF83F100D032E4 /* PBXContainerItemProxy */;
 		};
 		03AFD72028AF83F100D032E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 03AFD70328AF83F000D032E4 /* Counter */;
+			target = 03AFD70328AF83F000D032E4 /* CounterDemo */;
 			targetProxy = 03AFD71F28AF83F100D032E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -482,11 +490,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Counter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CounterDemo/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Counter/Info.plist;
+				INFOPLIST_FILE = CounterDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -512,11 +520,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Counter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CounterDemo/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Counter/Info.plist;
+				INFOPLIST_FILE = CounterDemo/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -551,7 +559,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Counter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Counter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CounterDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CounterDemo";
 			};
 			name = Debug;
 		};
@@ -571,7 +579,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Counter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Counter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CounterDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CounterDemo";
 			};
 			name = Release;
 		};
@@ -614,7 +622,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		03AFD6FF28AF83F000D032E4 /* Build configuration list for PBXProject "Counter" */ = {
+		03AFD6FF28AF83F000D032E4 /* Build configuration list for PBXProject "CounterDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03AFD72628AF83F100D032E4 /* Debug */,
@@ -623,7 +631,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03AFD72828AF83F100D032E4 /* Build configuration list for PBXNativeTarget "Counter" */ = {
+		03AFD72828AF83F100D032E4 /* Build configuration list for PBXNativeTarget "CounterDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03AFD72928AF83F100D032E4 /* Debug */,
@@ -632,7 +640,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03AFD72B28AF83F100D032E4 /* Build configuration list for PBXNativeTarget "CounterTests" */ = {
+		03AFD72B28AF83F100D032E4 /* Build configuration list for PBXNativeTarget "CounterDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03AFD72C28AF83F100D032E4 /* Debug */,
@@ -641,7 +649,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03AFD72E28AF83F100D032E4 /* Build configuration list for PBXNativeTarget "CounterUITests" */ = {
+		03AFD72E28AF83F100D032E4 /* Build configuration list for PBXNativeTarget "CounterDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03AFD72F28AF83F100D032E4 /* Debug */,

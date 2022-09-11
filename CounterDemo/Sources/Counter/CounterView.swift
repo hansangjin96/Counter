@@ -69,7 +69,7 @@ struct CounterView: View {
             }
             .buttonStyle(.borderless)
         }
-        .navigationTitle("Counter Demo")
+        .navigationTitle("Counter")
         .alert(
             store.scope(state: \.alert),
             dismiss: .alertDismissed

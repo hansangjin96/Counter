@@ -20,7 +20,7 @@ struct RootView: View {
                 Form {
                     Section {
                         NavigationLink(
-                            "Counter Demo",
+                            "Counter",
                             destination: {
                                 CounterView(
                                     store: store.scope(
@@ -32,7 +32,7 @@ struct RootView: View {
                         )
                         
                         NavigationLink(
-                            "Favorite Primes",
+                            "Favorite",
                             destination: {
                                 FavoriteView(
                                     store: store.scope(
@@ -44,7 +44,7 @@ struct RootView: View {
                         )
                     }
                 }
-                .navigationTitle("Counter App")
+                .navigationTitle("Counter Demo")
             }
         }
     }
@@ -57,7 +57,7 @@ struct RootView_Previews: PreviewProvider {
         RootView(
             store: Store(
                 initialState: RootState(),
-                reducer: RootReducer,
+                reducer: rootReducer,
                 environment: .live
             )
         )
