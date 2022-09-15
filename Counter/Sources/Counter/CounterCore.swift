@@ -35,7 +35,7 @@ public enum CounterAction: Equatable {
     case incrementButtonTapped
     case decrementButtonTapped
     
-    case isPrimeButtonTapped
+    case numberFactButtonTapped
     case numberFactResponse(TaskResult<String>)
     case cancelButtonTapped
     
@@ -69,7 +69,7 @@ public let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironm
         state.numberFact = nil
         return .none
         
-    case .isPrimeButtonTapped:
+    case .numberFactButtonTapped:
         state.isNumberFactRequestInFlight = true
         state.numberFact = nil
         return .task { [number = state.currentNumber] in
@@ -81,11 +81,6 @@ public let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironm
         }
         .cancellable(id: NumberFactRequestID.self)
         
-    case .cancelButtonTapped:
-        state.isNumberFactRequestInFlight = false
-        state.numberFact = nil
-        return .cancel(id: NumberFactRequestID.self)
-        
     case let .numberFactResponse(.success(response)):
         state.isNumberFactRequestInFlight = false
         state.numberFact = response
@@ -94,6 +89,11 @@ public let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironm
     case .numberFactResponse(.failure):
         state.isNumberFactRequestInFlight = false
         return .none
+        
+    case .cancelButtonTapped:
+        state.isNumberFactRequestInFlight = false
+        state.numberFact = nil
+        return .cancel(id: NumberFactRequestID.self)
         
     case .saveFavoriteNumberButtonTapped:
         guard !state.favoriteNumbers.contains(state.currentNumber) else { return .none }

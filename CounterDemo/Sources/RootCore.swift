@@ -23,7 +23,7 @@ enum RootAction: Equatable {
 }
 
 struct RootEnvironment: Equatable {
-    static let live: Self = .init()
+    static var live: Self = .init()
 }
 
 let rootReducer = Reducer<RootState, RootAction, RootEnvironment>.combine(

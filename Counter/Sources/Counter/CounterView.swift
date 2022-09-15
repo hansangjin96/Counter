@@ -32,7 +32,7 @@ public struct CounterView: View {
                         
                         Divider()
                         
-                        Button("find number fact") { viewStore.send(.isPrimeButtonTapped) }
+                        Button("find number fact") { viewStore.send(.numberFactButtonTapped) }
                             .frame(maxWidth: .infinity)
                         
                         Divider()

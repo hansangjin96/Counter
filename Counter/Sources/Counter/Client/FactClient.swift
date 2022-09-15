@@ -15,7 +15,7 @@ public struct FactClient {
 
 extension FactClient {
     public static let live: Self = .init { number in
-        try await Task.sleep(nanoseconds: NSEC_PER_SEC / 2)
+        try await Task.sleep(nanoseconds: NSEC_PER_SEC)
         let (data, _) = try await URLSession.shared.data(from: URL(string: "http://numbersapi.com/\(number)/trivia")!)
         return String(decoding: data, as: UTF8.self)
     }
