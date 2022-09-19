@@ -11,9 +11,7 @@ import ComposableArchitecture
 public struct FavoriteState: Equatable {
     public var favoriteNumbers: [Int]
     
-    public init(
-        favoriteNumbers: [Int]
-    ) {
+    public init(favoriteNumbers: [Int]) {
         self.favoriteNumbers = favoriteNumbers
     }
 }

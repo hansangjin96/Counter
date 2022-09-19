@@ -11,6 +11,7 @@ import ComposableArchitecture
 
 struct RootState: Equatable {
     var counter = CounterState()
+    /// favorite은 favoriteNumbers를 shared state로 공유함
     var favorite: FavoriteState {
         get { FavoriteState(favoriteNumbers: counter.favoriteNumbers) }
         set { counter.favoriteNumbers = newValue.favoriteNumbers }
@@ -26,6 +27,9 @@ struct RootEnvironment: Equatable {
     static var live: Self = .init()
 }
 
+/// `/RootAction.counter` 여기서 `/`는 
+/// Enum에서 `WritableKeyPath`처럼 Action을 꺼내올 수 있게 point-free가 구현한 `CasePath` 문법
+///
 let rootReducer = Reducer<RootState, RootAction, RootEnvironment>.combine(
     counterReducer.pullback(
         state: \.counter,

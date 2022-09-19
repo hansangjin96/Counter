@@ -16,13 +16,17 @@ final class CounterTests: XCTestCase {
     // MARK: 더하기 빼기
     
     func test_더하기버튼이_눌렸을때_숫자증가() async {
+        /// `.unimplemented`는 `store`가 dependency에 관계 없이 pure하게 동작함을 보장
+        /// 
         let store: TestStore = .init(
             initialState: CounterState(),
             reducer: counterReducer,
             environment: .unimplemented
         )
         
-        // let _ = Xcode 버그 때문에 warning 생겨서 붙여줌
+        /// `let _ = `는 Xcode 버그 때문에 warning 생겨서 붙여줌
+        /// `await`키워드는 `Effect`가 시작될 때만 suspend가 일어남
+        ///  
         let _ = await store.send(.incrementButtonTapped) {
             $0.currentNumber = 1
         }

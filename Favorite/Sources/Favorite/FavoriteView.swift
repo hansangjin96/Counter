@@ -10,8 +10,8 @@ import ComposableArchitecture
 
 public struct FavoriteView: View {
     
-    let store: Store<FavoriteState, FavoriteAction>
-    @ObservedObject var viewStore: ViewStore<FavoriteState, FavoriteAction>
+    private let store: Store<FavoriteState, FavoriteAction>
+    @ObservedObject private var viewStore: ViewStore<FavoriteState, FavoriteAction>
     
     // MARK: Body
     

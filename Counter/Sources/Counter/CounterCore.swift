@@ -8,13 +8,13 @@
 import ComposableArchitecture
 
 public struct CounterState: Equatable {
+    var alert: AlertState<CounterAction>?
     var currentNumber: Int
     var isNumberFactRequestInFlight: Bool
     var numberFact: String?
     public var favoriteNumbers: [Int]
-    var alert: AlertState<CounterAction>?
     
-    var isFavoriteNumber: Bool { return favoriteNumbers.contains(currentNumber) }
+    var isFavoriteNumber: Bool { favoriteNumbers.contains(currentNumber) }
     
     public init(
         currentNumber: Int = 0,
@@ -48,9 +48,7 @@ public enum CounterAction: Equatable {
 public struct CounterEnvironment {
     var factClient: FactClient
     
-    public init(
-        factClient: FactClient
-    ) {
+    public init(factClient: FactClient) {
         self.factClient = factClient
     }
 }
@@ -62,7 +60,7 @@ public let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironm
     case .incrementButtonTapped:
         state.currentNumber += 1
         state.numberFact = nil
-        return .none
+        return Effect.none
         
     case .decrementButtonTapped:
         state.currentNumber -= 1
@@ -72,6 +70,7 @@ public let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironm
     case .numberFactButtonTapped:
         state.isNumberFactRequestInFlight = true
         state.numberFact = nil
+        /// state는 inout이라 바뀔 수 있으므로 캡쳐해서 넣어줌
         return .task { [number = state.currentNumber] in
             await .numberFactResponse(
                 TaskResult {
@@ -98,6 +97,7 @@ public let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironm
     case .saveFavoriteNumberButtonTapped:
         guard !state.favoriteNumbers.contains(state.currentNumber) else { return .none }
         state.favoriteNumbers.append(state.currentNumber)
+        
         state.alert = AlertState(
             title: TextState("저장되었습니다."), 
             dismissButton: .cancel(TextState("확인"))
@@ -107,6 +107,7 @@ public let counterReducer = Reducer<CounterState, CounterAction, CounterEnvironm
     case .deleteFavoriteNumberButtonTapped:
         guard state.favoriteNumbers.contains(state.currentNumber) else { return .none }
         state.favoriteNumbers.removeAll { $0 == state.currentNumber }
+        
         state.alert = AlertState(
             title: TextState("삭제되었습니다."), 
             dismissButton: .cancel(TextState("확인"))
